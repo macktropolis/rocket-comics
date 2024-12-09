@@ -1,0 +1,30 @@
+---
+const { id, alt, title } = Astro.props;
+const src = "/images/rocket_comics";
+const filename = "rocket_comics_" + id + ".jpg";
+const href = src + "/" + filename;
+---
+
+<figure>
+    <a href={href} title={title ?? "Rocket Comics"} target="_blank">
+        <img
+            src={href}
+            alt={alt ?? "A day at Rocket Comics"}
+            title={title ?? "Rocket Comics"}
+        />
+    </a>
+    <figcaption>{alt ?? "A day at Rocket Comics"}</figcaption>
+</figure>
+
+<style lang="scss">
+    @use "../styles/variables" as vars;
+
+    figure {
+        opacity: 0.5;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+</style>

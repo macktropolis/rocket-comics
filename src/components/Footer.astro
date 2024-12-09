@@ -1,0 +1,83 @@
+---
+
+---
+
+<footer id="site">
+    <section class="info">
+        <p>
+            &copy; <script type="text/javascript" is:inline>
+                document.write(new Date().getFullYear());
+            </script> Rocket Comics. All Rights Reserved.
+        </p>
+    </section>
+    <!--<p>
+        <a
+            href="https://twitter.com/rocketcomics"
+            target="_blank"
+            rel="noopener">Twitter</a
+        >
+        | <a
+            href="https://facebook.com/rocketcomics"
+            target="_blank"
+            rel="noopener">Facebook</a
+        >
+        | <a
+            href="https://instagram.com/rocketcomics"
+            target="_blank"
+            rel="noopener">Instagram</a
+        >
+    </p>-->
+    <span class="footer__deco">&nbsp;</span>
+    <span class="footer__bg">&nbsp;</span>
+</footer>
+
+<style lang="scss">
+    @use "../styles/variables" as vars;
+
+    footer#site {
+        color: vars.$tx-clr-primary;
+        display: grid;
+        align-content: start;
+        justify-content: center;
+        position: relative;
+        height: 300px;
+        padding: 0;
+        width: 100%;
+        z-index: 100;
+
+        section.info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+
+            & > p {
+                margin: 0;
+                padding: 1rem;
+            }
+        }
+
+        & > .footer__deco {
+            background: url("/images/launchpad.png") no-repeat 47.5% bottom;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        & > .footer__bg {
+            background-color: vars.$bg-clr-secondary;
+            height: 80px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+</style>

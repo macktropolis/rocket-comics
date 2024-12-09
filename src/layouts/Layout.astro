@@ -1,22 +1,52 @@
+---
+// data imports
+import * as site from "../data/site.json";
+
+import BaseHead from "../components/BaseHead.astro";
+import BaseEnd from "../components/BaseEnd.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { siteName, author, url, logo } = site;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+	<BaseHead />
 	<body>
-		<slot />
-	</body>
+		<Header siteName={siteName} author={author} url={url} logo={logo} />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body><BaseEnd />
 </html>
 
-<style>
+<style lang="scss">
+	@use "../styles/variables" as vars;
 	html,
 	body {
 		margin: 0;
-		width: 100%;
+		padding: 0;
+	}
+	body {
+		background-color: vars.$bg-clr-primary;
+		background: linear-gradient(
+			180deg,
+			rgba(37, 48, 76, 1) 30%,
+			rgba(138, 61, 19, 1) 75%,
+			rgba(37, 48, 76, 1) 90%
+		);
+		color: vars.$tx-clr-light;
+		font-family: vars.$ff-sans;
+		font-size: calc(vars.$fs-050 * 1.25);
 		height: 100%;
+		min-height: 100dvh;
+		overflow-x: hidden;
+		width: 100%;
+	}
+	main {
+		margin: 0 auto;
+		padding: 0;
 	}
 </style>

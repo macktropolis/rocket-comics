@@ -1,0 +1,116 @@
+@use './variables' as vars;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: vars.$ff-display;
+    font-weight: 900;
+    margin-bottom: vars.$sp-200;
+}
+
+h1 {
+    font-size: clamp(2rem, 3rem, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2rem, 2.5rem);
+}
+
+p {
+    line-height: 150%;
+    margin-bottom: vars.$sp-200;
+}
+
+figure {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+
+    &.left {
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+
+    &.right {
+        float: right;
+        margin: 0 0 1rem 1rem;
+    }
+
+    &:before,
+    &:after {
+        background: transparent;
+        border-left: 1px solid vars.$bg-clr-light;
+        border-radius: 0;
+        border-top: 1px solid vars.$bg-clr-light;
+        content: "";
+        height: 25%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 25%;
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &:after {
+        bottom: 0;
+        right: 0;
+        top: auto;
+        left: auto;
+        border: none;
+        border-right: 1px solid vars.$bg-clr-light;
+        border-bottom: 1px solid vars.$bg-clr-light;
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            transform: scale(1);
+        }
+
+    }
+
+    img {
+        aspect-ratio: 1 / 1;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto 10px auto;
+        object-fit: cover;
+        width: 75%;
+        z-index: 1;
+    }
+
+    figcaption {
+        color: vars.$tx-clr-light;
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+.bigbox {
+    display: flow-root;
+    margin: vars.$sp-200 auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    max-width: 110ch;
+    width: 80%;
+
+    p {
+        line-height: 200%;
+    }
+}

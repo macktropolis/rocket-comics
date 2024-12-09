@@ -1,0 +1,20 @@
+{
+    "siteName": "Rocket Comics",
+    "description": "A gallery of Rocket Comics memories from the early 1990s.",
+    "version": "1.0",
+    "url": "https://rocketcomics.com",
+    "favicon": "/favicon",
+    "logo": "/images/rocket_comics_logo_new.png",
+    "author": "Mack Richardson",
+    "phone": "+1 336.403.1746",
+    "email": "mack@mackrichardson.com",
+    "address1": "7295 Broad St",
+    "address2": "",
+    "addressCity": "Rural Hall",
+    "addressState": "NC",
+    "addressZIP": "27045",
+    "linkedin": "https://linkedin.com/in/macktropolis/",
+    "facebook": "https://facebook.com/macktropolis/",
+    "twitter": "https://x.com/macktropolis/",
+    "youtube": "https://www.youtube.com/@mackdaddyfun"
+  }
