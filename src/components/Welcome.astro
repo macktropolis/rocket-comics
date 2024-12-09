@@ -45,7 +45,18 @@ const { siteName, author, url } = Astro.props;
 <style lang="scss">
     .bigbox {
         figure {
+            margin: 0 2rem 1rem 0;
             max-width: 200px;
+
+            &.right {
+                margin: 0 0 1rem 2rem;
+            }
+            img {
+                margin-bottom: 1rem;
+            }
+            figcaption {
+                opacity: 0.5;
+            }
         }
     }
 </style>

@@ -30,10 +30,8 @@ figure {
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: 0 0 1rem 0;
-    max-width: 300px;
+    max-width: 100%;
     overflow: hidden;
-    padding: 1rem;
     position: relative;
 
     &.left {
@@ -46,39 +44,15 @@ figure {
         margin: 0 0 1rem 1rem;
     }
 
-    &:before,
-    &:after {
-        background: transparent;
-        border-left: 1px solid vars.$bg-clr-light;
-        border-radius: 0;
-        border-top: 1px solid vars.$bg-clr-light;
-        content: "";
-        height: 25%;
-        left: 0;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;
-        width: 25%;
-        transform: scale(0);
-        transform-origin: center;
-        transition: transform 0.4s ease-in-out;
-    }
-
-    &:after {
-        bottom: 0;
-        right: 0;
-        top: auto;
-        left: auto;
-        border: none;
-        border-right: 1px solid vars.$bg-clr-light;
-        border-bottom: 1px solid vars.$bg-clr-light;
-    }
-
     &:hover {
 
         &:before,
         &:after {
             transform: scale(1);
+        }
+
+        img {
+            filter: grayscale(0);
         }
 
     }
@@ -87,9 +61,11 @@ figure {
         aspect-ratio: 1 / 1;
         border-radius: 5px;
         display: block;
-        margin: 0 auto 10px auto;
+        margin: 0;
+        filter: grayscale(100%);
         object-fit: cover;
-        width: 75%;
+        transition: filter 0.5s ease-in-out;
+        width: 100%;
         z-index: 1;
     }
 
