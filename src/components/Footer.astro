@@ -34,22 +34,20 @@
 <style lang="scss">
     @use "../styles/variables" as vars;
 
-    $height: 300px;
+    $height: 200px;
     footer#site {
         color: vars.$tx-clr-primary;
         display: grid;
         align-content: start;
         justify-content: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
         height: $height;
         padding: 0;
+        position: relative;
         width: 100%;
         z-index: 100;
 
         &:before {
+            display: none;
             background: rgb(54, 51, 70);
             background: linear-gradient(
                 180deg,

@@ -3,6 +3,7 @@ import Figure from "./Figure.astro";
 ---
 
 <header class="gallery">
+    <i class="fa-sharp fa-solid fa-rocket-launch"></i>
     <h2 class="center">Rocket Comics Memories</h2>
     <p>
         <small
@@ -298,11 +299,20 @@ import Figure from "./Figure.astro";
         width: 95%;
         max-width: 110ch;
 
+        i.fa-rocket-launch {
+            display: block;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem auto;
+            text-align: center;
+        }
+
         h2 {
             margin-bottom: 0;
+            text-align: center;
         }
 
         p {
+            text-align: center;
             small {
                 font-size: 0.7rem;
             }
