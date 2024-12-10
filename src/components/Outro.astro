@@ -1,0 +1,40 @@
+---
+import SocialShare from "./SocialShare.astro";
+---
+
+<section class="content">
+    <SocialShare />
+
+    <h2>Thank You for Visiting Rocket Comics</h2>
+    <p>
+        We hope you enjoyed your trip down memory lane with Rocket Comics. If
+        you did, please share the site with others who would appreciate a
+        nostalgic pop culture journey or were Rocket Comics' customers.
+    </p>
+
+    <p>
+        If you have any photos, videos or articles featuring Rocket Comics,
+        please contact <a
+            href="mailto:mack@mackrichardson.com"
+            title="Contact Mack Richardson"
+            >Mack Richardson (mack@mackrichardson.com)</a
+        >.
+    </p>
+</section>
+<style lang="scss">
+    @use "../styles/variables" as vars;
+
+    .content {
+        margin: 3rem auto;
+        width: 95%;
+        max-width: 110ch;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+</style>

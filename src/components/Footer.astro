@@ -34,16 +34,37 @@
 <style lang="scss">
     @use "../styles/variables" as vars;
 
+    $height: 300px;
     footer#site {
         color: vars.$tx-clr-primary;
         display: grid;
         align-content: start;
         justify-content: center;
-        position: relative;
-        height: 300px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $height;
         padding: 0;
         width: 100%;
         z-index: 100;
+
+        &:before {
+            background: rgb(54, 51, 70);
+            background: linear-gradient(
+                180deg,
+                rgba(54, 51, 70, 0) 0%,
+                rgba(40, 49, 75, 1) 30%,
+                rgba(37, 48, 76, 1) 100%
+            );
+            content: "";
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            right: 0;
+            height: calc($height * 0.7);
+            z-index: -2;
+        }
 
         section.info {
             display: flex;

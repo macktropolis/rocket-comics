@@ -6,8 +6,10 @@ import Figure from "./Figure.astro";
     <h2 class="center">Rocket Comics Memories</h2>
     <p>
         <small
-            >Please excuse the quality of some of these photos. I have the
-            originals and am working on getting higher quality scans.</small
+            ><i
+                >Please excuse the quality of some of these photos. Higher
+                quality scans are in the works.</i
+            ></small
         >
     </p>
 </header>
@@ -288,6 +290,7 @@ import Figure from "./Figure.astro";
 </div>
 
 <style lang="scss">
+    @use "../styles/variables" as vars;
     $col-size: 25%;
 
     header.gallery {
@@ -306,11 +309,11 @@ import Figure from "./Figure.astro";
         }
     }
     .gallery-images {
+        background-color: vars.$bg-clr-shade;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
         margin: 0 auto;
-        max-width: 95%;
         padding: 0;
         -webkit-perspective: 0;
         perspective: 0;

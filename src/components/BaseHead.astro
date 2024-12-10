@@ -27,7 +27,7 @@ const { title, description } = Astro.props;
     <!-- Primary Meta Tags -->
     <title>{`${siteName}`}</title>
 
-    <meta name="title" content={`${title} | ${siteName}`} />
+    <meta name="title" content={`${siteName}`} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
 
@@ -39,17 +39,22 @@ const { title, description } = Astro.props;
         rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <script
+        src="https://kit.fontawesome.com/88922a1596.js"
+        crossorigin="anonymous"></script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
-    <meta property="og:title" content={`${title} | ${siteName}`} />
+    <meta property="og:title" content={`${siteName}`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={logo} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:title" content={`${title} | ${siteName}`} />
+    <meta property="twitter:title" content={`${siteName}`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={logo} />
 </head>

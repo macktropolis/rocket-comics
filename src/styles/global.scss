@@ -1,5 +1,22 @@
 @use './variables' as vars;
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: vars.$bg-clr-primary;
+    color: vars.$tx-clr-light;
+    font-family: vars.$ff-sans;
+    font-size: calc(vars.$fs-050 * 1.25);
+    height: 100%;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +39,20 @@ h2 {
 p {
     line-height: 150%;
     margin-bottom: vars.$sp-200;
+}
+
+a {
+    color: vars.$tx-clr-secondary;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 0 300px 0;
+}
+
+section.content {
+    margin: 2rem auto;
+    max-width: 110ch;
 }
 
 figure {
@@ -59,7 +90,6 @@ figure {
 
     img {
         aspect-ratio: 1 / 1;
-        border-radius: 5px;
         display: block;
         margin: 0;
         filter: grayscale(100%);
