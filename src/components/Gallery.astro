@@ -2,7 +2,7 @@
 import Figure from "./Figure.astro";
 ---
 
-<header class="gallery">
+<header>
     <i class="fa-sharp fa-solid fa-rocket-launch"></i>
     <h2 class="center">Rocket Comics Memories</h2>
     <p>
@@ -294,7 +294,7 @@ import Figure from "./Figure.astro";
     @use "../styles/variables" as vars;
     $col-size: 25%;
 
-    header.gallery {
+    header {
         margin: 3rem auto;
         width: 95%;
         max-width: 110ch;
@@ -318,14 +318,48 @@ import Figure from "./Figure.astro";
             }
         }
     }
-    .gallery-images {
-        background-color: vars.$bg-clr-shade;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-content: center;
+
+    .gallery {
+        background-color: hsl(0, 0%, 95%, 0.25);
+        border-bottom-right-radius: 0;
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        border: 10px solid hsl(0, 0%, 95%, 1);
         margin: 0 auto;
         padding: 0;
-        -webkit-perspective: 0;
         perspective: 0;
+        position: relative;
+        -webkit-perspective: 0;
+        max-width: 125ch;
+        width: 95%;
+
+        &:before {
+            background-color: hsl(0, 0%, 95%, 1);
+            border-radius: 0;
+            border-top-right-radius: 5px;
+            color: vars.$bg-clr-primary;
+            content: "Gallery";
+            font-family: vars.$ff-display;
+            font-weight: bold;
+            height: 50px;
+            left: -10px;
+            padding: 1rem 2rem;
+            position: absolute;
+            text-transform: uppercase;
+            top: -50px;
+            width: fit-content;
+            z-index: -1;
+        }
+    }
+    .gallery-images {
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
     }
 </style>

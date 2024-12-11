@@ -43,9 +43,41 @@ const { siteName, author, url } = Astro.props;
 </div>
 
 <style lang="scss">
+    @use "../styles/variables" as vars;
     .bigbox {
+        background-color: hsl(0, 0%, 95%, 0.25);
+        border: 10px solid hsl(0, 0%, 95%, 1);
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 2rem;
+        position: relative;
+        max-width: 125ch !important;
+
+        &:before {
+            background-color: hsl(0, 0%, 95%, 1);
+            border-radius: 0;
+            border-top-right-radius: 5px;
+            color: vars.$bg-clr-primary;
+            content: "Introduction";
+            font-family: vars.$ff-display;
+            font-weight: bold;
+            height: 50px;
+            left: -10px;
+            padding: 1rem 2rem;
+            position: absolute;
+            text-transform: uppercase;
+            top: -50px;
+            width: fit-content;
+            z-index: -1;
+        }
+
         h1 {
             text-align: center;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
         }
         figure {
             margin: 0 2rem 1rem 0;
