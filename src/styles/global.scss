@@ -14,7 +14,22 @@ body {
     height: 100%;
     min-height: 100dvh;
     overflow-x: hidden;
+    position: relative;
     width: 100%;
+
+    &:before {
+        background-image: url('../images/starfield1.jpg');
+        background-size: cover;
+        content: "";
+        opacity: 0.3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100dvh;
+        z-index: -100;
+    }
 }
 
 h1,
@@ -118,5 +133,86 @@ figure {
 
     p {
         line-height: 200%;
+    }
+}
+
+#astronaut {
+    animation: float 5s ease-in infinite;
+    position: absolute;
+    bottom: 30rem;
+    right: 4rem;
+    height: auto;
+    width: 75px;
+    z-index: -1;
+}
+
+#mars {
+    animation: rotate 20s linear infinite;
+    position: fixed;
+    top: 35rem;
+    right: 5rem;
+    height: 100px;
+    width: 100px;
+    z-index: -2;
+}
+
+#moon {
+    animation: rotate 15s linear infinite;
+    filter: grayscale(100%);
+    position: fixed;
+    top: 10rem;
+    left: 5rem;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+}
+
+@keyframes float {
+    0% {
+        bottom: 350px;
+    }
+
+    50% {
+        bottom: 375px;
+    }
+
+    100% {
+        bottom: 350px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    35% {
+        opacity: 0.60;
+    }
+
+    50% {
+        opacity: 0.40;
+    }
+
+    80% {
+        opacity: 0.75;
+    }
+
+    90% {
+        opacity: 0.20;
+    }
+
+    100% {
+        opacity: 0.1;
     }
 }
