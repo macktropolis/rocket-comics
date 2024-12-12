@@ -7,26 +7,29 @@
         <p>
             &copy; <script type="text/javascript" is:inline>
                 document.write(new Date().getFullYear());
-            </script> Rocket Comics. All Rights Reserved.
+            </script> Rocket Comics. All Rights Reserved. Designed by <a
+                href="https://mackrichardson.com"
+                target="_blank"
+                rel="noopener">Mack Richardson</a
+            >
+            <br />
+            <a
+                href="https://twitter.com/mackdaddyfun"
+                target="_blank"
+                rel="noopener">Twitter</a
+            >
+            | <a
+                href="https://facebook.com/mackdaddyfun"
+                target="_blank"
+                rel="noopener">Facebook</a
+            >
+            | <a
+                href="https://instagram.com/mackdaddyfun"
+                target="_blank"
+                rel="noopener">Instagram</a
+            >
         </p>
     </section>
-    <!--<p>
-        <a
-            href="https://twitter.com/rocketcomics"
-            target="_blank"
-            rel="noopener">Twitter</a
-        >
-        | <a
-            href="https://facebook.com/rocketcomics"
-            target="_blank"
-            rel="noopener">Facebook</a
-        >
-        | <a
-            href="https://instagram.com/rocketcomics"
-            target="_blank"
-            rel="noopener">Instagram</a
-        >
-    </p>-->
     <span class="footer__deco">&nbsp;</span>
     <span class="footer__bg">&nbsp;</span>
 </footer>
@@ -38,45 +41,26 @@
     footer#site {
         color: vars.$tx-clr-primary;
         display: grid;
-        align-content: start;
+        align-content: end;
         justify-content: center;
-        height: $height;
+        margin-top: 15rem;
         padding: 0;
         position: relative;
         width: 100%;
         z-index: 100;
 
-        &:before {
-            display: none;
-            background: rgb(54, 51, 70);
-            background: linear-gradient(
-                180deg,
-                rgba(54, 51, 70, 0) 0%,
-                rgba(40, 49, 75, 1) 30%,
-                rgba(37, 48, 76, 1) 100%
-            );
-            content: "";
-            position: absolute;
-            bottom: 80px;
-            left: 0;
-            right: 0;
-            height: calc($height * 0.7);
-            z-index: -2;
-        }
-
         section.info {
             display: flex;
             align-items: center;
-            justify-content: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            justify-content: end;
+            padding: 1.5rem 1rem;
+            position: relative;
             z-index: 100;
 
             & > p {
                 margin: 0;
                 padding: 1rem;
+                text-align: center;
             }
         }
 
@@ -86,12 +70,12 @@
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0;
+            top: -90%;
             z-index: 1;
         }
         & > .footer__bg {
             background-color: vars.$bg-clr-secondary;
-            height: 80px;
+            height: 100%;
             position: absolute;
             left: 0;
             right: 0;

@@ -2,9 +2,7 @@
 import SocialShare from "./SocialShare.astro";
 ---
 
-<section class="content">
-    <SocialShare />
-
+<section class="outro">
     <article>
         <h2>Thank You for Visiting Rocket Comics</h2>
         <p>
@@ -22,19 +20,22 @@ import SocialShare from "./SocialShare.astro";
             >.
         </p>
     </article>
+    <SocialShare />
 </section>
 <style lang="scss">
     @use "../styles/variables" as vars;
 
-    .content {
-        margin: 3rem auto;
-        width: 95%;
+    .outro {
+        margin: 3rem auto 0 auto;
+        position: relative;
+        width: 90%;
+        z-index: 1;
 
         @media screen and (min-width: 768px) {
             display: flex;
             align-items: center;
             justify-content: center;
-            max-width: 125ch;
+            max-width: vars.$max-width;
         }
 
         article {

@@ -10,7 +10,7 @@ body {
     background-color: vars.$bg-clr-primary;
     color: vars.$tx-clr-light;
     font-family: vars.$ff-sans;
-    font-size: calc(vars.$fs-050 * 1.25);
+    font-size: vars.$fs-075;
     height: 100%;
     min-height: 100dvh;
     overflow-x: hidden;
@@ -138,7 +138,7 @@ figure {
 
 #astronaut {
     animation: float 5s ease-in infinite;
-    position: absolute;
+    position: fixed;
     bottom: 30rem;
     right: 4rem;
     height: auto;
@@ -160,7 +160,7 @@ figure {
     animation: rotate 15s linear infinite;
     filter: grayscale(100%);
     position: fixed;
-    top: 10rem;
+    top: 20rem;
     left: 5rem;
     height: 50px;
     width: 50px;
