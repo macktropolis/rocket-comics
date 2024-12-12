@@ -12,21 +12,21 @@ interface Props {
     description?: string;
 }
 
-const { siteName, author, url, favicon, ogImage } = site;
+const { siteName, description, author, url, favicon, ogImage } = site;
 ---
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href={favicon + ".png"} />
     <link rel="icon" type="image/svg+xml" href={favicon + ".svg"} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary Meta Tags -->
-    <title>{`${siteName}`}</title>
+    <title>{siteName}</title>
 
-    <meta name="title" content={`${siteName}`} />
+    <meta name="title" content={siteName} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
 
@@ -46,14 +46,14 @@ const { siteName, author, url, favicon, ogImage } = site;
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
-    <meta property="og:title" content={`${siteName}`} />
+    <meta property="og:title" content={siteName} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:title" content={`${siteName}`} />
+    <meta property="twitter:title" content={siteName} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
 </head>
