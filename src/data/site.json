@@ -3,7 +3,7 @@
     "description": "A look back at Rocket Comics, a comic book store in Burlingon, North Carolina in the early 1990s.",
     "version": "1.0",
     "url": "https://rocketcomics.com",
-    "favicon": "/favicon",
+    "favicon": "favicon",
     "logo": "/images/rocket_comics_logo_new.png",
     "ogImage": "/images/og-rocket-comics.webp",
     "author": "Mack Richardson",
