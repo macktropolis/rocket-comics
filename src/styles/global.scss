@@ -70,58 +70,6 @@ section.content {
     max-width: 110ch;
 }
 
-figure {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-
-    &.left {
-        float: left;
-        margin: 0 1rem 1rem 0;
-    }
-
-    &.right {
-        float: right;
-        margin: 0 0 1rem 1rem;
-    }
-
-    &:hover {
-
-        &:before,
-        &:after {
-            transform: scale(1);
-        }
-
-        img {
-            filter: grayscale(0);
-        }
-
-    }
-
-    img {
-        aspect-ratio: 1 / 1;
-        display: block;
-        margin: 0;
-        filter: grayscale(100%);
-        object-fit: cover;
-        transition: filter 0.5s ease-in-out;
-        width: 100%;
-        z-index: 1;
-    }
-
-    figcaption {
-        color: vars.$tx-clr-light;
-        font-size: 0.7rem;
-        margin-bottom: 0;
-        text-align: center;
-    }
-}
-
 .bigbox {
     display: flow-root;
     margin: vars.$sp-200 auto;
@@ -134,6 +82,59 @@ figure {
     p {
         line-height: 200%;
     }
+
+    figure {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &.left {
+            float: left;
+            margin: 0 1rem 1rem 0;
+        }
+
+        &.right {
+            float: right;
+            margin: 0 0 1rem 1rem;
+        }
+
+        &:hover {
+
+            &:before,
+            &:after {
+                transform: scale(1);
+            }
+
+            img {
+                filter: grayscale(0);
+            }
+
+        }
+
+        img {
+            aspect-ratio: 1 / 1;
+            display: block;
+            margin: 0;
+            filter: grayscale(100%);
+            object-fit: cover;
+            transition: filter 0.5s ease-in-out;
+            width: 100%;
+            z-index: 1;
+        }
+
+        figcaption {
+            color: vars.$tx-clr-light;
+            font-size: 0.7rem;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+
 }
 
 #astronaut {
@@ -165,6 +166,34 @@ figure {
     height: 50px;
     width: 50px;
     z-index: -1;
+}
+
+$col-size: 25%;
+
+header {
+    margin: 3rem auto;
+    width: 95%;
+    max-width: vars.$max-width;
+
+    i.fa-rocket-launch {
+        display: block;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem auto;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+
+        small {
+            font-size: 0.7rem;
+        }
+    }
 }
 
 @keyframes float {
