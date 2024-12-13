@@ -1,21 +1,12 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W6EF5LD9QT"
+></script>
 <script>
   // @ts-ignore
-  if (typeof window !== "undefined" && !window.gtag) {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-W6EF5LD9QT";
-    document.head.appendChild(script);
-
-    // @ts-ignore
-    window.dataLayer = window.dataLayer || [];
-    // @ts-ignore
-    window.gtag = function () {
-      // @ts-ignore
-      window.dataLayer.push(arguments);
-    };
-    // @ts-ignore
-    window.gtag("js", new Date());
-    // @ts-ignore
-    window.gtag("config", "G-W6EF5LD9QT");
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
   }
+  gtag("js", new Date());
+
+  gtag("config", "G-W6EF5LD9QT");
 </script>
