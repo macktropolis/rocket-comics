@@ -138,12 +138,24 @@ section.content {
 }
 
 #astronaut {
-    animation: float 5s ease-in infinite;
+    animation: float 5s ease-in-out infinite;
     position: fixed;
-    bottom: 30rem;
+    top: 35rem;
     right: 4rem;
     height: auto;
     width: 75px;
+    z-index: -1;
+}
+
+#earth {
+    display: none;
+    animation: rotate 30s linear infinite;
+    position: fixed;
+    bottom: 10rem;
+    filter: grayscale(50%);
+    left: 7rem;
+    height: 50px;
+    width: 50px;
     z-index: -1;
 }
 
@@ -346,15 +358,15 @@ header {
 
 @keyframes float {
     0% {
-        bottom: 350px;
+        top: 35rem;
     }
 
     50% {
-        bottom: 375px;
+        top: 36rem;
     }
 
     100% {
-        bottom: 350px;
+        top: 35rem;
     }
 }
 
