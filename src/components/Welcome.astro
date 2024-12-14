@@ -3,56 +3,62 @@ const { siteName, author, url } = Astro.props;
 ---
 
 <div class="bigbox">
-    <h1>Welcome Back to {siteName}!</h1>
-    <figure class="left">
-        <img
-            src="/images/rocket_comics_logo.png"
-            alt="The original Rocket Comics logo."
-        />
-        <figcaption>The original Rocket Comics logo.</figcaption>
-    </figure>
-    <figure class="right">
-        <img
-            src="/images/rocket_comics/rocket_comics_0.webp"
-            alt="An early advertisement for Rocket Comics in the Burlington-Times News."
-        />
-        <figcaption>
-            An early advertisement for Rocket Comics in the Burlington-Times
-            News.
-        </figcaption>
-    </figure>
-    <p>
-        In 1991, Mack Richardson opened the doors of Rocket Comics in
-        Burlington, NC. It was an exciting time to be a comic book fan and,
-        doubly so, for those who wanted to share their love of comics with
-        others. Mack's shop was a place where fans could gather, talk about
-        their favorite characters, and discover new stories. It was a comic book
-        shop meant for comic book fans.
-    </p>
-    <p>
-        Even though the shop has been closed for many years now, the spirit of
-        Rocket Comics lives on. This site is a tribute to the shop and the fans
-        who made it a special place.
-    </p>
-    <p>
-        The comic book industry <i>(and world, at large)</i> has changed so much
-        over the last 30 years. In many ways, it seems to be a much more challenging
-        environment to successfully operate a comic book shop. That being said, plans
-        are in the works to reopen Rocket Comics. <strong>Stay tuned!</strong>
-    </p>
+    <article>
+        <h1>Welcome Back to {siteName}!</h1>
+        <figure class="left">
+            <img
+                src="/images/rocket_comics_logo.png"
+                alt="The original Rocket Comics logo."
+            />
+            <figcaption>The original Rocket Comics logo.</figcaption>
+        </figure>
+        <p>
+            In 1991, Mack Richardson opened the doors of Rocket Comics in
+            Burlington, NC. It was an exciting time to be a comic book fan and,
+            doubly so, for those who wanted to share their love of comics with
+            others. Mack's shop was a place where fans could gather, talk about
+            their favorite characters, and discover new stories. It was a comic
+            book shop meant for comic book fans.
+        </p>
+        <figure class="right">
+            <img
+                src="/images/rocket_comics/rocket_comics_0.webp"
+                alt="An early advertisement for Rocket Comics in the Burlington-Times News."
+            />
+            <figcaption>
+                An early advertisement for Rocket Comics in the Burlington-Times
+                News.
+            </figcaption>
+        </figure>
+        <p>
+            Even though the shop has been closed for many years now, the spirit
+            of Rocket Comics lives on. This site is a tribute to the shop and
+            the fans who made it a special place.
+        </p>
+        <p>
+            The comic book industry <i>(and world, at large)</i> has changed so much
+            over the last 30 years. In many ways, it seems to be a much more challenging
+            environment to successfully operate a comic book shop. That being said,
+            plans are in the works to reopen Rocket Comics. <strong
+                >Stay tuned!</strong
+            >
+        </p>
+    </article>
 </div>
 
 <style lang="scss">
     @use "../styles/variables" as vars;
     .bigbox {
-        background-color: hsl(0, 0%, 95%, 0.25);
+        background-color: hsl(0, 0%, 95%, 0.5);
         border: 10px solid hsl(0, 0%, 95%, 1);
-        border-radius: 20px;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-inline: none;
         padding: 2rem;
         position: relative;
-        max-width: vars.$max-width !important;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            background-color: hsl(0, 0%, 95%, 0.25);
+        }
 
         &:before {
             background-color: hsl(0, 0%, 95%, 1);
@@ -63,7 +69,7 @@ const { siteName, author, url } = Astro.props;
             font-family: vars.$ff-display;
             font-weight: bold;
             height: 50px;
-            left: -10px;
+            left: 0;
             padding: 1rem 2rem;
             position: absolute;
             text-transform: uppercase;
@@ -72,6 +78,9 @@ const { siteName, author, url } = Astro.props;
             z-index: -1;
         }
 
+        article {
+            max-width: vars.$max-width !important;
+        }
         h1 {
             text-align: center;
         }
@@ -80,11 +89,18 @@ const { siteName, author, url } = Astro.props;
             margin-bottom: 0;
         }
         figure {
-            margin: 0 2rem 1rem 0;
+            float: none;
+            margin: 0 auto 1rem;
             max-width: 200px;
 
-            &.right {
-                margin: 0 0 1rem 2rem;
+            @media screen and (min-width: 768px) {
+                float: left;
+                margin: 0 2rem 1rem 0;
+
+                &.right {
+                    float: right;
+                    margin: 0 0 1rem 2rem;
+                }
             }
             img {
                 filter: none;

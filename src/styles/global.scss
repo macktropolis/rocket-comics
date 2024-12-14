@@ -76,8 +76,12 @@ section.content {
     margin: 0 auto;
     padding: 0;
     position: relative;
-    max-width: 110ch;
-    width: 80%;
+
+    article {
+        margin-inline: auto;
+        max-width: 110ch;
+        width: 80%;
+    }
 
     p {
         line-height: 200%;
@@ -156,7 +160,7 @@ section.content {
     left: 7rem;
     height: 50px;
     width: 50px;
-    z-index: -1;
+    z-index: -2;
 }
 
 #mars {
@@ -177,7 +181,7 @@ section.content {
     left: 5rem;
     height: 50px;
     width: 50px;
-    z-index: -1;
+    z-index: -2;
 }
 
 $col-size: 25%;
